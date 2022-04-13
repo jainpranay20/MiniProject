@@ -1,0 +1,9 @@
+---
+- name: Pull docker image of the Calculator
+  hosts: all
+  tasks:
+    - name: pull docker image
+      shell: docker pull jainpranay20/mini_project
+
+    - name: running container
+      shell: docker run --name miniproject -it -d jainpranay20/mini_project /bin/bash
