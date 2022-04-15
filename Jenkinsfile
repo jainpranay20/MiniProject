@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Publish Docker Images') {
             steps {
-                withDockerRegistry([ credentialsId: "mini-project", url: "" ]) {
+                withDockerRegistry([ credentialsId: "dockercred", url: "" ]) {
                     sh 'docker push jainpranay20/mini_project:latest'
                 }
             }
